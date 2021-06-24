@@ -1,0 +1,292 @@
+<instance description="" template="upgrade">
+	<group name="upgrade_bag">
+		<bool name="enable_in_hold" value="True" />
+		<float name="global_max_limit" value="0" />
+		<bool name="has_speech_code" value="False" />
+		<float name="local_max_limit" value="1" />
+		<enum name="owner_type" value="self" />
+		<group name="speech_code_2">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="speech_code_3">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="time_cost">
+			<group name="cost">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="fuel" value="0" />
+				<float name="manpower" value="0" />
+				<float name="munition" value="0" />
+				<float name="popcap" value="0" />
+			</group>
+			<float name="time_seconds" value="0" />
+		</group>
+		<bool name="ui_event_cue" value="False" />
+		<enum name="ui_group" value="command_panel" />
+		<int name="ui_position" value="-1" />
+		<group name="ui_info">
+			<locstring name="extra_text" value="0" />
+			<locstring name="help_text" value="0" />
+			<string name="hotkey_name" value="" />
+			<icon name="icon_name" value="" />
+			<bool name="reveal_for_decryption" value="False" />
+			<locstring name="screen_name" value="0" />
+			<locstring name="brief_text" value="0" />
+			<locstring name="screen_name_short" value="0" />
+			<enum name="ui_style" value="default" />
+		</group>
+		<bool name="validate_actions" value="False" />
+		<list name="actions">
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746328" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746329" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="3" />
+					<float name="y" value="0" />
+					<float name="z" value="3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="R">
+				<uniqueid name="id" value="1073746332" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746335" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746336" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="-3" />
+					<float name="y" value="0" />
+					<float name="z" value="-3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="L">
+				<uniqueid name="id" value="1073746339" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746342" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746343" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="3" />
+					<float name="y" value="0" />
+					<float name="z" value="0" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="R2">
+				<uniqueid name="id" value="1073746346" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746349" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746350" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="-3" />
+					<float name="y" value="0" />
+					<float name="z" value="0" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="L2">
+				<uniqueid name="id" value="1073746353" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746356" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746357" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+					<float name="z" value="3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="R3">
+				<uniqueid name="id" value="1073746360" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746371" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746372" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+					<float name="z" value="-3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="L3">
+				<uniqueid name="id" value="1073746375" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746378" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746379" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="3" />
+					<float name="y" value="0" />
+					<float name="z" value="-3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="R4">
+				<uniqueid name="id" value="1073746382" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\spawn_entity">
+				<float name="duration" value="9999999" />
+				<instance_reference name="entity_blueprint" value="ebps\mod\races\global\building\victory_point_cover" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<bool name="permanent" value="True" />
+				<bool name="player_owned" value="False" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+				</group>
+				<uniqueid name="id" value="1073746385" />
+				<template_reference name="spawn_attached_option" value="options\none">
+				</template_reference>
+				<list name="spawned_entity_actions">
+					<template_reference name="actions" value="action\change_ownership">
+						<enum name="change_type" value="neutral" />
+						<uniqueid name="id" value="1073746386" />
+					</template_reference>
+				</list>
+				<group name="offset">
+					<float name="x" value="-3" />
+					<float name="y" value="0" />
+					<float name="z" value="3" />
+				</group>
+			</template_reference>
+			<template_reference name="action" value="action\no_action" comment="L4">
+				<uniqueid name="id" value="1073746397" />
+				<template_reference name="ui_help_text" value="options\none">
+				</template_reference>
+			</template_reference>
+		</list>
+		<list name="requirements">
+		</list>
+		<icon name="ui_kicker_icon_name" value="" />
+		<locstring name="ui_squad_name_override" value="0" />
+		<locstring name="ui_squad_help_text_override" value="0" />
+		<locstring name="ui_squad_extra_text_override" value="0" />
+		<list name="ui_preview">
+		</list>
+		<list name="on_cancel_actions">
+		</list>
+		<list name="on_begin_actions">
+		</list>
+	</group>
+	<uniqueid name="pbgid" value="1073741847" />
+</instance>

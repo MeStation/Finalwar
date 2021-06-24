@@ -1,0 +1,475 @@
+<instance description="" template="upgrade">
+	<group name="upgrade_bag">
+		<bool name="enable_in_hold" value="True" />
+		<float name="global_max_limit" value="1" />
+		<bool name="has_speech_code" value="False" />
+		<float name="local_max_limit" value="0" />
+		<enum name="owner_type" value="player" />
+		<group name="speech_code_2">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="speech_code_3">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="time_cost">
+			<group name="cost">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="fuel" value="0" />
+				<float name="manpower" value="0" />
+				<float name="munition" value="0" />
+				<float name="popcap" value="0" />
+			</group>
+			<float name="time_seconds" value="0" />
+		</group>
+		<bool name="ui_event_cue" value="False" />
+		<enum name="ui_group" value="command_panel" />
+		<int name="ui_position" value="-1" />
+		<group name="ui_info">
+			<locstring name="extra_text" value="0" />
+			<locstring name="help_text" value="0" />
+			<string name="hotkey_name" value="" />
+			<icon name="icon_name" value="" />
+			<bool name="reveal_for_decryption" value="False" />
+			<locstring name="screen_name" value="0" />
+			<locstring name="brief_text" value="0" />
+			<locstring name="screen_name_short" value="0" />
+			<enum name="ui_style" value="default" />
+		</group>
+		<bool name="validate_actions" value="False" />
+		<list name="actions">
+			<template_reference name="action" value="action\apply_modifiers_action">
+				<float name="duration" value="0" />
+				<bool name="permanent" value="False" />
+				<list name="modifiers">
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\airdropped_mines_mp" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\artillery_155mm" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\off_map_smoke_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\p47_rocket_attack" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\siege_240mm_barrage" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\support_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\support_artillery_decoy" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\aef\modal_ability\commander_ability\time_on_target_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\allied_strategic_bombing" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\mortar_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\mortar_fire_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\pepper_pot" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\percision_barrage" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\british\modal_ability\commander_ability\rapid_response_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\light_support_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\observation_flare_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\railway_gun_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\sector_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\strategic_bombing" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\soviet\modal_ability\commander_ability\anti_tank_overwatch" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\soviet\modal_ability\commander_ability\fear_propaganda_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\soviet\modal_ability\commander_ability\fire_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\soviet\modal_ability\commander_ability\il-2_anti_tank_rockets" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\airborne_assault" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\flare_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\howitzer_105mm_offmap_barrage" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\okw_sector_assault" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\rocket_barrage" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\west_german\modal_ability\commander_ability\zeroing_artillery" />
+					</template_reference>
+					<template_reference name="modifier" value="modifiers\ability_recharge_time_modifier">
+						<enum name="application_type" value="apply_to_ability" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<enum name="usage_type" value="multiplication" />
+						<float name="value" value="6.1235" />
+						<instance_reference name="tooltip" value="modifier_tooltip\ability_recharge_time_modifier" />
+						<instance_reference name="target_type_name" value="abilities\german\modal_ability\commander_ability\stuka_bombing_strike" />
+					</template_reference>
+				</list>
+				<uniqueid name="id" value="1073742797" />
+			</template_reference>
+			<template_reference name="action" value="action\requirement_action">
+				<bool name="check_self" value="False" />
+				<bool name="global_fire_and_forget_on_success" value="False" />
+				<bool name="instant_requirement_check" value="False" />
+				<bool name="kill_action_on_failed_requirements" value="False" />
+				<bool name="no_retrigger" value="False" />
+				<bool name="validate_all_sub_actions" value="False" />
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\softcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+					</template_reference>
+				</list>
+				<list name="action_table">
+					<template_reference name="action" value="action\filter_action">
+						<bool name="apply_to_future_units" value="False" />
+						<bool name="apply_to_local_player" value="True" />
+						<instance_reference name="deprecated_entity_type" value="" />
+						<instance_reference name="deprecated_squad_type" value="sbps\races\british\soldiers\sniper_squad\sniper_british_squad_mp" />
+						<group name="target_info">
+							<template_reference name="target_info" value="type_ability_target_type\all">
+							</template_reference>
+						</group>
+						<enum name="deprecated_unit_class_type" value="" />
+						<list name="action_table">
+							<template_reference name="action" value="action\change_target_action">
+								<list name="actions">
+									<template_reference name="action" value="action\requirement_action">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="False" />
+										<bool name="kill_action_on_failed_requirements" value="False" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_in_state">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<bool name="garrisoned" value="False" />
+												<bool name="healed" value="False" />
+												<float name="in_combat_since" value="-1" />
+												<bool name="injured" value="False" />
+												<bool name="leader" value="False" />
+												<bool name="not_moving" value="False" />
+												<bool name="not_retreating" value="False" />
+												<bool name="pinned" value="False" />
+												<bool name="suppressed" value="False" />
+												<bool name="camouflaged" value="True" />
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\apply_modifiers_action">
+												<float name="duration" value="0" />
+												<bool name="permanent" value="False" />
+												<list name="modifiers">
+													<template_reference name="modifier" value="modifiers\camouflage_enable">
+														<enum name="application_type" value="apply_to_entity" />
+														<bool name="exclusive" value="False" />
+														<string name="modifier_id" value="" />
+														<string name="target_type_name" value="" />
+														<enum name="usage_type" value="enable" />
+														<float name="value" value="-1" />
+														<instance_reference name="tooltip" value="modifier_tooltip\camouflage_enable" />
+													</template_reference>
+												</list>
+												<uniqueid name="id" value="1073744631" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073744630" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+								</list>
+								<enum name="change_target_type" value="entities" />
+								<uniqueid name="id" value="1073744629" />
+							</template_reference>
+						</list>
+						<enum name="deprecated_squad_class_type" value="" />
+						<list name="target_requirements">
+						</list>
+						<bool name="target_squad" value="True" />
+						<uniqueid name="id" value="1073744628" />
+					</template_reference>
+				</list>
+				<uniqueid name="id" value="1073744627" />
+				<bool name="fire_and_forget_non_global" value="False" />
+				<template_reference name="ui_help_text" value="tables\help_text_phrase">
+					<int name="phrase_order" value="0" />
+					<locstring name="phrase" value="0" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\filter_action" comment="sdkfz_250">
+				<bool name="apply_to_future_units" value="True" />
+				<bool name="apply_to_local_player" value="True" />
+				<instance_reference name="deprecated_entity_type" value="" />
+				<instance_reference name="deprecated_squad_type" value="" />
+				<group name="target_info">
+					<template_reference name="target_info" value="type_ability_target_type\own">
+					</template_reference>
+				</group>
+				<enum name="deprecated_unit_class_type" value="mechanized_250" />
+				<list name="action_table">
+					<template_reference name="action" value="action\change_target_action">
+						<list name="actions">
+							<template_reference name="action" value="action\apply_modifiers_action">
+								<float name="duration" value="0" />
+								<bool name="permanent" value="False" />
+								<list name="modifiers">
+									<template_reference name="modifier" value="modifiers\range_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="True" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="addition" />
+										<float name="value" value="5" />
+										<instance_reference name="tooltip" value="modifier_tooltip\range_weapon_modifier" />
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073745385" />
+							</template_reference>
+						</list>
+						<enum name="change_target_type" value="entities" />
+						<uniqueid name="id" value="1073745386" />
+					</template_reference>
+				</list>
+				<enum name="deprecated_squad_class_type" value="" />
+				<list name="target_requirements">
+				</list>
+				<bool name="target_squad" value="False" />
+				<uniqueid name="id" value="1073745387" />
+			</template_reference>
+		</list>
+		<list name="requirements">
+		</list>
+		<icon name="ui_kicker_icon_name" value="" />
+		<locstring name="ui_squad_name_override" value="0" />
+		<locstring name="ui_squad_help_text_override" value="0" />
+		<locstring name="ui_squad_extra_text_override" value="0" />
+		<list name="ui_preview">
+		</list>
+		<list name="on_cancel_actions">
+		</list>
+		<list name="on_begin_actions">
+		</list>
+	</group>
+	<uniqueid name="pbgid" value="1073741841" />
+</instance>

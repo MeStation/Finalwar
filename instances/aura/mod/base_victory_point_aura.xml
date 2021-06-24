@@ -1,0 +1,639 @@
+<instance description="" template="aura">
+	<group name="aura_bag">
+		<list name="actions">
+			<template_reference name="action" value="action\requirement_action">
+				<bool name="check_self" value="False" />
+				<bool name="global_fire_and_forget_on_success" value="False" />
+				<bool name="instant_requirement_check" value="False" />
+				<bool name="kill_action_on_failed_requirements" value="False" />
+				<bool name="no_retrigger" value="False" />
+				<bool name="validate_all_sub_actions" value="False" />
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_entity_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="False" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<bool name="include_queued" value="False" />
+					</template_reference>
+				</list>
+				<list name="action_table">
+					<template_reference name="action" value="action\upgrade_add">
+						<bool name="apply_to_entities_in_squad" value="False" />
+						<bool name="trigger_publish_event" value="False" />
+						<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<uniqueid name="id" value="1073743110" />
+					</template_reference>
+					<template_reference name="action" value="action\timed_action">
+						<float name="duration" value="14400" />
+						<bool name="fire_and_forget" value="True" />
+						<list name="subactions">
+							<template_reference name="action" value="action\off_map_artillery">
+								<float name="num_salvo" value="1000" />
+								<float name="radius" value="512" />
+								<float name="source_offset_x" value="0" />
+								<float name="source_offset_y" value="80" />
+								<float name="source_offset_z" value="0" />
+								<float name="time_range_between_shells_max" value="30" />
+								<float name="time_range_between_shells_min" value="5" />
+								<instance_reference name="weapon_name" value="weapon\mod\artillery\offmap\e_tenbatsu_curse" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<uniqueid name="id" value="1073744974" />
+							</template_reference>
+							<template_reference name="action" value="action\off_map_artillery">
+								<float name="num_salvo" value="1000" />
+								<float name="radius" value="512" />
+								<float name="source_offset_x" value="0" />
+								<float name="source_offset_y" value="80" />
+								<float name="source_offset_z" value="0" />
+								<float name="time_range_between_shells_max" value="30" />
+								<float name="time_range_between_shells_min" value="5" />
+								<instance_reference name="weapon_name" value="weapon\mod\artillery\offmap\i_tenbatsu_curse" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<uniqueid name="id" value="1073745163" />
+							</template_reference>
+						</list>
+						<uniqueid name="id" value="1073744937" />
+					</template_reference>
+				</list>
+				<uniqueid name="id" value="1073743100" />
+				<bool name="fire_and_forget_non_global" value="False" />
+				<template_reference name="ui_help_text" value="tables\help_text_phrase">
+					<int name="phrase_order" value="0" />
+					<locstring name="phrase" value="0" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="action" value="action\timed_action">
+				<float name="duration" value="14400" />
+				<bool name="fire_and_forget" value="True" />
+				<list name="subactions">
+					<template_reference name="action" value="action\interval_action">
+						<float name="interval_second" value="180" />
+						<uniqueid name="id" value="1073744999" />
+						<list name="interval_subactions">
+							<group name="interval_subaction_group">
+								<float name="trigger_time_second" value="180" />
+								<list name="actions">
+									<template_reference name="action" value="action\delay">
+										<float name="delay" value="15" />
+										<float name="delay_min" value="3" />
+										<bool name="progress_bar" value="False" />
+										<bool name="randomize" value="True" />
+										<list name="delayed_actions">
+											<template_reference name="action" value="action\requirement_action" comment="aef">
+												<bool name="check_self" value="False" />
+												<bool name="global_fire_and_forget_on_success" value="False" />
+												<bool name="instant_requirement_check" value="True" />
+												<bool name="kill_action_on_failed_requirements" value="True" />
+												<bool name="no_retrigger" value="False" />
+												<bool name="validate_all_sub_actions" value="False" />
+												<list name="requirement_table">
+													<template_reference name="required" value="requirements\required_all_in_list">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<list name="requirements">
+															<template_reference name="requirement" value="requirements\required_race">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<instance_reference name="race" value="racebps\aef" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\il2\il2_stumovik" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\ju87\ju87_stuka" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\p47\p47_thunderbolt" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\typhoon\hawker_typhoon" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+														</list>
+													</template_reference>
+												</list>
+												<list name="action_table">
+													<template_reference name="action" value="action\target">
+														<group name="area_info">
+															<float name="angle_left" value="0" />
+															<float name="angle_right" value="0" />
+															<enum name="area_type" value="point" />
+															<float name="radius" value="0" />
+														</group>
+														<bool name="die_with_creator" value="True" />
+														<bool name="do_recalc_targets" value="False" />
+														<float name="duration" value="0" />
+														<bool name="entity_targets" value="False" />
+														<instance_reference name="entity_types_to_choose" value="" />
+														<bool name="stationary" value="False" />
+														<group name="target_info">
+															<template_reference name="target_info" value="type_ability_target_type\all">
+															</template_reference>
+														</group>
+														<enum name="unit_type" value="" />
+														<list name="subactions">
+															<template_reference name="action" value="action\air_strike_action">
+																<bool name="random_direction" value="True" />
+																<float name="source_offset_x" value="1" />
+																<float name="source_offset_y" value="1" />
+																<float name="source_offset_z" value="1" />
+																<float name="time_range_between_planes_maximum" value="4" />
+																<float name="time_range_between_planes_minimum" value="3" />
+																<bool name="use_long_path" value="False" />
+																<group name="loiter_info">
+																	<float name="loiter_area_radius" value="50" />
+																	<float name="loiter_time_sec" value="25" />
+																	<bool name="follow_target" value="False" />
+																	<float name="lowest_altitude" value="0" />
+																	<bool name="loiter_descend" value="False" />
+																	<float name="loiter_circling_time_sec" value="0" />
+																	<bool name="can_be_targeted" value="True" />
+																</group>
+																<group name="attack_info">
+																	<float name="target_lead_in_distance" value="8" />
+																	<int name="attacks_per_aircraft" value="10" />
+																	<float name="target_lead_out_distance" value="10" />
+																	<float name="delay_between_attack" value="0" />
+																	<float name="attack_sway_width" value="2" />
+																	<float name="attack_sway_frequency" value="1" />
+																	<float name="target_attack_distance" value="200" />
+																	<float name="target_attack_time_sec" value="3" />
+																	<float name="initial_attack_delay" value="0" />
+																</group>
+																<template_reference name="target_info" value="type_ability_target_type\has_all_in_list">
+																	<list name="target_infos">
+																		<template_reference name="info" value="type_ability_target_type\enemy">
+																		</template_reference>
+																		<template_reference name="info" value="type_ability_target_type\has_unit_type">
+																			<enum name="unit_type" value="aircraft" />
+																		</template_reference>
+																	</list>
+																</template_reference>
+																<int name="number_aircraft" value="1" />
+																<bool name="search_attack_target" value="False" />
+																<instance_reference name="aircraft_squad_name" value="sbps\mod\vehicles\aircraft\p47\p47_thunderbolt" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+																<uniqueid name="id" value="1073745033" />
+																<template_reference name="ui_help_text" value="tables\help_text_phrase">
+																	<int name="phrase_order" value="0" />
+																	<locstring name="phrase" value="0" />
+																</template_reference>
+																<list name="additional_loiter_info">
+																</list>
+																<list name="aircraft_on_spawn_actions">
+																</list>
+																<bool name="enable_landing" value="False" />
+															</template_reference>
+															<template_reference name="action" value="action\trigger_dca_action">
+																<string name="dca_action_name" value="UI\Paradrop_Warning_Smoke" />
+																<float name="duration" value="3" />
+																<bool name="is_terrain_only" value="True" />
+																<uniqueid name="id" value="1073746975" />
+															</template_reference>
+														</list>
+														<uniqueid name="id" value="1073745032" />
+														<bool name="any_subaction" value="True" />
+													</template_reference>
+												</list>
+												<uniqueid name="id" value="1073745002" />
+												<bool name="fire_and_forget_non_global" value="False" />
+												<template_reference name="ui_help_text" value="tables\help_text_phrase">
+													<int name="phrase_order" value="0" />
+													<locstring name="phrase" value="0" />
+												</template_reference>
+											</template_reference>
+											<template_reference name="action" value="action\requirement_action" comment="brit">
+												<bool name="check_self" value="False" />
+												<bool name="global_fire_and_forget_on_success" value="False" />
+												<bool name="instant_requirement_check" value="True" />
+												<bool name="kill_action_on_failed_requirements" value="True" />
+												<bool name="no_retrigger" value="False" />
+												<bool name="validate_all_sub_actions" value="False" />
+												<list name="requirement_table">
+													<template_reference name="required" value="requirements\required_all_in_list">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<list name="requirements">
+															<template_reference name="requirement" value="requirements\required_race">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<instance_reference name="race" value="racebps\british" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\il2\il2_stumovik" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\ju87\ju87_stuka" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\p47\p47_thunderbolt" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\typhoon\hawker_typhoon" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+														</list>
+													</template_reference>
+												</list>
+												<list name="action_table">
+													<template_reference name="action" value="action\target">
+														<group name="area_info">
+															<float name="angle_left" value="0" />
+															<float name="angle_right" value="0" />
+															<enum name="area_type" value="point" />
+															<float name="radius" value="0" />
+														</group>
+														<bool name="die_with_creator" value="True" />
+														<bool name="do_recalc_targets" value="False" />
+														<float name="duration" value="0" />
+														<bool name="entity_targets" value="False" />
+														<instance_reference name="entity_types_to_choose" value="" />
+														<bool name="stationary" value="False" />
+														<group name="target_info">
+															<template_reference name="target_info" value="type_ability_target_type\all">
+															</template_reference>
+														</group>
+														<enum name="unit_type" value="" />
+														<list name="subactions">
+															<template_reference name="action" value="action\air_strike_action">
+																<bool name="random_direction" value="True" />
+																<float name="source_offset_x" value="1" />
+																<float name="source_offset_y" value="1" />
+																<float name="source_offset_z" value="1" />
+																<float name="time_range_between_planes_maximum" value="4" />
+																<float name="time_range_between_planes_minimum" value="3" />
+																<bool name="use_long_path" value="False" />
+																<group name="loiter_info">
+																	<float name="loiter_area_radius" value="50" />
+																	<float name="loiter_time_sec" value="25" />
+																	<bool name="follow_target" value="False" />
+																	<float name="lowest_altitude" value="0" />
+																	<bool name="loiter_descend" value="False" />
+																	<float name="loiter_circling_time_sec" value="0" />
+																	<bool name="can_be_targeted" value="True" />
+																</group>
+																<group name="attack_info">
+																	<float name="target_lead_in_distance" value="8" />
+																	<int name="attacks_per_aircraft" value="10" />
+																	<float name="target_lead_out_distance" value="10" />
+																	<float name="delay_between_attack" value="0" />
+																	<float name="attack_sway_width" value="2" />
+																	<float name="attack_sway_frequency" value="1" />
+																	<float name="target_attack_distance" value="200" />
+																	<float name="target_attack_time_sec" value="3" />
+																	<float name="initial_attack_delay" value="0" />
+																</group>
+																<template_reference name="target_info" value="type_ability_target_type\has_all_in_list">
+																	<list name="target_infos">
+																		<template_reference name="info" value="type_ability_target_type\enemy">
+																		</template_reference>
+																		<template_reference name="info" value="type_ability_target_type\has_unit_type">
+																			<enum name="unit_type" value="aircraft" />
+																		</template_reference>
+																	</list>
+																</template_reference>
+																<int name="number_aircraft" value="1" />
+																<bool name="search_attack_target" value="False" />
+																<instance_reference name="aircraft_squad_name" value="sbps\mod\vehicles\aircraft\typhoon\hawker_typhoon" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+																<uniqueid name="id" value="1073745035" />
+																<template_reference name="ui_help_text" value="tables\help_text_phrase">
+																	<int name="phrase_order" value="0" />
+																	<locstring name="phrase" value="0" />
+																</template_reference>
+																<list name="additional_loiter_info">
+																</list>
+																<list name="aircraft_on_spawn_actions">
+																</list>
+																<bool name="enable_landing" value="False" />
+															</template_reference>
+															<template_reference name="action" value="action\trigger_dca_action">
+																<string name="dca_action_name" value="UI\Paradrop_Warning_Smoke" />
+																<float name="duration" value="3" />
+																<bool name="is_terrain_only" value="True" />
+																<uniqueid name="id" value="1073746976" />
+															</template_reference>
+														</list>
+														<uniqueid name="id" value="1073745034" />
+														<bool name="any_subaction" value="True" />
+													</template_reference>
+												</list>
+												<uniqueid name="id" value="1073745005" />
+												<bool name="fire_and_forget_non_global" value="False" />
+												<template_reference name="ui_help_text" value="tables\help_text_phrase">
+													<int name="phrase_order" value="0" />
+													<locstring name="phrase" value="0" />
+												</template_reference>
+											</template_reference>
+											<template_reference name="action" value="action\requirement_action" comment="soviet">
+												<bool name="check_self" value="False" />
+												<bool name="global_fire_and_forget_on_success" value="False" />
+												<bool name="instant_requirement_check" value="True" />
+												<bool name="kill_action_on_failed_requirements" value="True" />
+												<bool name="no_retrigger" value="False" />
+												<bool name="validate_all_sub_actions" value="False" />
+												<list name="requirement_table">
+													<template_reference name="required" value="requirements\required_all_in_list">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<list name="requirements">
+															<template_reference name="requirement" value="requirements\required_race">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<instance_reference name="race" value="racebps\soviet" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\il2\il2_stumovik" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\ju87\ju87_stuka" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\p47\p47_thunderbolt" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\typhoon\hawker_typhoon" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+														</list>
+													</template_reference>
+												</list>
+												<list name="action_table">
+													<template_reference name="action" value="action\target">
+														<group name="area_info">
+															<float name="angle_left" value="0" />
+															<float name="angle_right" value="0" />
+															<enum name="area_type" value="point" />
+															<float name="radius" value="0" />
+														</group>
+														<bool name="die_with_creator" value="True" />
+														<bool name="do_recalc_targets" value="False" />
+														<float name="duration" value="0" />
+														<bool name="entity_targets" value="False" />
+														<instance_reference name="entity_types_to_choose" value="" />
+														<bool name="stationary" value="False" />
+														<group name="target_info">
+															<template_reference name="target_info" value="type_ability_target_type\all">
+															</template_reference>
+														</group>
+														<enum name="unit_type" value="" />
+														<list name="subactions">
+															<template_reference name="action" value="action\air_strike_action">
+																<bool name="random_direction" value="True" />
+																<float name="source_offset_x" value="1" />
+																<float name="source_offset_y" value="1" />
+																<float name="source_offset_z" value="1" />
+																<float name="time_range_between_planes_maximum" value="4" />
+																<float name="time_range_between_planes_minimum" value="3" />
+																<bool name="use_long_path" value="False" />
+																<group name="loiter_info">
+																	<float name="loiter_area_radius" value="50" />
+																	<float name="loiter_time_sec" value="25" />
+																	<bool name="follow_target" value="False" />
+																	<float name="lowest_altitude" value="0" />
+																	<bool name="loiter_descend" value="False" />
+																	<float name="loiter_circling_time_sec" value="0" />
+																	<bool name="can_be_targeted" value="True" />
+																</group>
+																<group name="attack_info">
+																	<float name="target_lead_in_distance" value="8" />
+																	<int name="attacks_per_aircraft" value="10" />
+																	<float name="target_lead_out_distance" value="10" />
+																	<float name="delay_between_attack" value="0" />
+																	<float name="attack_sway_width" value="2" />
+																	<float name="attack_sway_frequency" value="1" />
+																	<float name="target_attack_distance" value="200" />
+																	<float name="target_attack_time_sec" value="3" />
+																	<float name="initial_attack_delay" value="0" />
+																</group>
+																<template_reference name="target_info" value="type_ability_target_type\has_all_in_list">
+																	<list name="target_infos">
+																		<template_reference name="info" value="type_ability_target_type\enemy">
+																		</template_reference>
+																		<template_reference name="info" value="type_ability_target_type\has_unit_type">
+																			<enum name="unit_type" value="aircraft" />
+																		</template_reference>
+																	</list>
+																</template_reference>
+																<int name="number_aircraft" value="1" />
+																<bool name="search_attack_target" value="False" />
+																<instance_reference name="aircraft_squad_name" value="sbps\mod\vehicles\aircraft\il2\il2_stumovik" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+																<uniqueid name="id" value="1073745037" />
+																<template_reference name="ui_help_text" value="tables\help_text_phrase">
+																	<int name="phrase_order" value="0" />
+																	<locstring name="phrase" value="0" />
+																</template_reference>
+																<list name="additional_loiter_info">
+																</list>
+																<list name="aircraft_on_spawn_actions">
+																</list>
+																<bool name="enable_landing" value="False" />
+															</template_reference>
+															<template_reference name="action" value="action\trigger_dca_action">
+																<string name="dca_action_name" value="UI\Paradrop_Warning_Smoke" />
+																<float name="duration" value="3" />
+																<bool name="is_terrain_only" value="True" />
+																<uniqueid name="id" value="1073746977" />
+															</template_reference>
+														</list>
+														<uniqueid name="id" value="1073745036" />
+														<bool name="any_subaction" value="True" />
+													</template_reference>
+												</list>
+												<uniqueid name="id" value="1073745007" />
+												<bool name="fire_and_forget_non_global" value="False" />
+												<template_reference name="ui_help_text" value="tables\help_text_phrase">
+													<int name="phrase_order" value="0" />
+													<locstring name="phrase" value="0" />
+												</template_reference>
+											</template_reference>
+											<template_reference name="action" value="action\requirement_action" comment="axis">
+												<bool name="check_self" value="False" />
+												<bool name="global_fire_and_forget_on_success" value="False" />
+												<bool name="instant_requirement_check" value="True" />
+												<bool name="kill_action_on_failed_requirements" value="True" />
+												<bool name="no_retrigger" value="False" />
+												<bool name="validate_all_sub_actions" value="False" />
+												<list name="requirement_table">
+													<template_reference name="required" value="requirements\required_all_in_list">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<list name="requirements">
+															<template_reference name="requirement" value="requirements\required_any_in_list">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<list name="requirements">
+																	<template_reference name="requirement" value="requirements\required_race">
+																		<enum name="reason" value="usage" />
+																		<locstring name="ui_name" value="0" />
+																		<instance_reference name="race" value="racebps\german" />
+																	</template_reference>
+																	<template_reference name="requirement" value="requirements\required_race">
+																		<enum name="reason" value="usage" />
+																		<locstring name="ui_name" value="0" />
+																		<instance_reference name="race" value="racebps\west_german" />
+																	</template_reference>
+																</list>
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\il2\il2_stumovik" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\ju87\ju87_stuka" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\p47\p47_thunderbolt" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+															<template_reference name="requirement" value="requirements\required_squad">
+																<enum name="reason" value="usage" />
+																<locstring name="ui_name" value="0" />
+																<float name="max_squad_cap" value="1" />
+																<instance_reference name="squad_name" value="sbps\mod\vehicles\aircraft\typhoon\hawker_typhoon" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+															</template_reference>
+														</list>
+													</template_reference>
+												</list>
+												<list name="action_table">
+													<template_reference name="action" value="action\target">
+														<group name="area_info">
+															<float name="angle_left" value="0" />
+															<float name="angle_right" value="0" />
+															<enum name="area_type" value="point" />
+															<float name="radius" value="0" />
+														</group>
+														<bool name="die_with_creator" value="True" />
+														<bool name="do_recalc_targets" value="False" />
+														<float name="duration" value="0" />
+														<bool name="entity_targets" value="False" />
+														<instance_reference name="entity_types_to_choose" value="" />
+														<bool name="stationary" value="False" />
+														<group name="target_info">
+															<template_reference name="target_info" value="type_ability_target_type\all">
+															</template_reference>
+														</group>
+														<enum name="unit_type" value="" />
+														<list name="subactions">
+															<template_reference name="action" value="action\air_strike_action">
+																<bool name="random_direction" value="True" />
+																<float name="source_offset_x" value="1" />
+																<float name="source_offset_y" value="1" />
+																<float name="source_offset_z" value="1" />
+																<float name="time_range_between_planes_maximum" value="4" />
+																<float name="time_range_between_planes_minimum" value="3" />
+																<bool name="use_long_path" value="False" />
+																<group name="loiter_info">
+																	<float name="loiter_area_radius" value="50" />
+																	<float name="loiter_time_sec" value="25" />
+																	<bool name="follow_target" value="False" />
+																	<float name="lowest_altitude" value="0" />
+																	<bool name="loiter_descend" value="False" />
+																	<float name="loiter_circling_time_sec" value="0" />
+																	<bool name="can_be_targeted" value="True" />
+																</group>
+																<group name="attack_info">
+																	<float name="target_lead_in_distance" value="8" />
+																	<int name="attacks_per_aircraft" value="10" />
+																	<float name="target_lead_out_distance" value="10" />
+																	<float name="delay_between_attack" value="0" />
+																	<float name="attack_sway_width" value="2" />
+																	<float name="attack_sway_frequency" value="1" />
+																	<float name="target_attack_distance" value="200" />
+																	<float name="target_attack_time_sec" value="3" />
+																	<float name="initial_attack_delay" value="0" />
+																</group>
+																<template_reference name="target_info" value="type_ability_target_type\has_all_in_list">
+																	<list name="target_infos">
+																		<template_reference name="info" value="type_ability_target_type\enemy">
+																		</template_reference>
+																		<template_reference name="info" value="type_ability_target_type\has_unit_type">
+																			<enum name="unit_type" value="aircraft" />
+																		</template_reference>
+																	</list>
+																</template_reference>
+																<int name="number_aircraft" value="1" />
+																<bool name="search_attack_target" value="False" />
+																<instance_reference name="aircraft_squad_name" value="sbps\mod\vehicles\aircraft\ju87\ju87_stuka" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+																<uniqueid name="id" value="1073745039" />
+																<template_reference name="ui_help_text" value="tables\help_text_phrase">
+																	<int name="phrase_order" value="0" />
+																	<locstring name="phrase" value="0" />
+																</template_reference>
+																<list name="additional_loiter_info">
+																</list>
+																<list name="aircraft_on_spawn_actions">
+																</list>
+																<bool name="enable_landing" value="False" />
+															</template_reference>
+															<template_reference name="action" value="action\trigger_dca_action">
+																<string name="dca_action_name" value="UI\Paradrop_Warning_Smoke" />
+																<float name="duration" value="3" />
+																<bool name="is_terrain_only" value="True" />
+																<uniqueid name="id" value="1073746978" />
+															</template_reference>
+														</list>
+														<uniqueid name="id" value="1073745038" />
+														<bool name="any_subaction" value="True" />
+													</template_reference>
+												</list>
+												<uniqueid name="id" value="1073745009" />
+												<bool name="fire_and_forget_non_global" value="False" />
+												<template_reference name="ui_help_text" value="tables\help_text_phrase">
+													<int name="phrase_order" value="0" />
+													<locstring name="phrase" value="0" />
+												</template_reference>
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073745001" />
+										<bool name="can_prevent_refund" value="False" />
+									</template_reference>
+								</list>
+							</group>
+						</list>
+					</template_reference>
+				</list>
+				<uniqueid name="id" value="1073744998" />
+			</template_reference>
+		</list>
+		<bool name="affects_squads" value="False" />
+	</group>
+	<uniqueid name="pbgid" value="1073741830" />
+</instance>

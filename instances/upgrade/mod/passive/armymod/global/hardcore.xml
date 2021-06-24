@@ -1,0 +1,597 @@
+<instance description="" template="upgrade">
+	<group name="upgrade_bag">
+		<bool name="enable_in_hold" value="True" />
+		<float name="global_max_limit" value="1" />
+		<bool name="has_speech_code" value="False" />
+		<float name="local_max_limit" value="0" />
+		<enum name="owner_type" value="player" />
+		<group name="speech_code_2">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="speech_code_3">
+			<string name="code_1" value="" />
+			<string name="code_2" value="" />
+			<string name="code_3" value="" />
+		</group>
+		<group name="time_cost">
+			<group name="cost">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="fuel" value="0" />
+				<float name="manpower" value="0" />
+				<float name="munition" value="0" />
+				<float name="popcap" value="0" />
+			</group>
+			<float name="time_seconds" value="0" />
+		</group>
+		<bool name="ui_event_cue" value="False" />
+		<enum name="ui_group" value="command_panel" />
+		<int name="ui_position" value="-1" />
+		<group name="ui_info">
+			<locstring name="extra_text" value="0" />
+			<locstring name="help_text" value="0" />
+			<string name="hotkey_name" value="" />
+			<icon name="icon_name" value="" />
+			<bool name="reveal_for_decryption" value="False" />
+			<locstring name="screen_name" value="0" />
+			<locstring name="brief_text" value="0" />
+			<locstring name="screen_name_short" value="0" />
+			<enum name="ui_style" value="default" />
+		</group>
+		<bool name="validate_actions" value="False" />
+		<list name="actions">
+			<template_reference name="action" value="action\interval_action" comment="vehicle_medium">
+				<float name="interval_second" value="45" />
+				<uniqueid name="id" value="1073743894" />
+				<list name="interval_subactions">
+					<group name="interval_subaction_group">
+						<float name="trigger_time_second" value="45" />
+						<list name="actions">
+							<template_reference name="action" value="action\timed_action">
+								<float name="duration" value="1.5" />
+								<bool name="fire_and_forget" value="True" />
+								<list name="subactions">
+									<template_reference name="action" value="action\requirement_action" comment="aef">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="True" />
+										<bool name="kill_action_on_failed_requirements" value="True" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_all_in_list">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<list name="requirements">
+													<template_reference name="requirement" value="requirements\required_race">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<instance_reference name="race" value="racebps\aef" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\aef\vehicles\m36_tank_destroyer_squad\m36_tank_destroyer_squad_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="3" />
+														<instance_reference name="squad_name" value="sbps\races\aef\vehicles\m4a3_sherman_squad\m4a3e8_sherman_easy_8_squad_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="9" />
+														<instance_reference name="squad_name" value="sbps\races\aef\vehicles\m8_greyhound_squad\m8_greyhound_squad_mp" />
+													</template_reference>
+												</list>
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\set_start_position_target_action">
+												<uniqueid name="id" value="1073743987" />
+												<list name="action_list">
+													<template_reference name="action" value="action\random_action">
+														<bool name="instant" value="True" />
+														<list name="random_actions">
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\aef\vehicles\m36_tank_destroyer_squad\m36_tank_destroyer_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073743990" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\aef\vehicles\m4a3_sherman_squad\m4a3e8_sherman_easy_8_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073743991" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\aef\vehicles\m8_greyhound_squad\m8_greyhound_squad_mp" />
+																			<instance_reference name="squad" value="sbps\races\aef\vehicles\m8_greyhound_squad\m8_greyhound_squad_mp" />
+																			<instance_reference name="squad" value="sbps\races\aef\vehicles\m8_greyhound_squad\m8_greyhound_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073746130" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+														</list>
+														<uniqueid name="id" value="1073743992" />
+													</template_reference>
+												</list>
+												<instance_reference name="pass_type" value="pass_types\heavy_crusher" />
+												<int name="precise_size" value="1" />
+												<float name="offset_distance" value="0" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073743993" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+									<template_reference name="action" value="action\requirement_action" comment="england">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="True" />
+										<bool name="kill_action_on_failed_requirements" value="True" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_all_in_list">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<list name="requirements">
+													<template_reference name="requirement" value="requirements\required_race">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<instance_reference name="race" value="racebps\british" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\british\vehicles\comet_tank_squad_mp\comet_tank_squad_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="4" />
+														<instance_reference name="squad_name" value="sbps\races\british\vehicles\cromwell_squad_mp\cromwell_mk4_75mm_squad_mp" />
+													</template_reference>
+												</list>
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\set_start_position_target_action">
+												<uniqueid name="id" value="1073743994" />
+												<list name="action_list">
+													<template_reference name="action" value="action\random_action">
+														<bool name="instant" value="True" />
+														<list name="random_actions">
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\british\vehicles\comet_tank_squad_mp\comet_tank_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073743998" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\british\vehicles\cromwell_squad_mp\cromwell_mk4_75mm_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073743999" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+														</list>
+														<uniqueid name="id" value="1073744000" />
+													</template_reference>
+												</list>
+												<instance_reference name="pass_type" value="pass_types\heavy_crusher" />
+												<int name="precise_size" value="1" />
+												<float name="offset_distance" value="0" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073744001" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+									<template_reference name="action" value="action\requirement_action" comment="soviet">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="True" />
+										<bool name="kill_action_on_failed_requirements" value="True" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_all_in_list">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<list name="requirements">
+													<template_reference name="requirement" value="requirements\required_race">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<instance_reference name="race" value="racebps\soviet" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\soviet\vehicles\su-85\su-85_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="3" />
+														<instance_reference name="squad_name" value="sbps\races\soviet\vehicles\t_34_squad\t_34_85_squad_mp" />
+													</template_reference>
+												</list>
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\set_start_position_target_action">
+												<uniqueid name="id" value="1073744002" />
+												<list name="action_list">
+													<template_reference name="action" value="action\random_action">
+														<bool name="instant" value="True" />
+														<list name="random_actions">
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\soviet\vehicles\su-85\su-85_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744006" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\soviet\vehicles\t_34_squad\t_34_85_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744007" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+														</list>
+														<uniqueid name="id" value="1073744008" />
+													</template_reference>
+												</list>
+												<instance_reference name="pass_type" value="pass_types\heavy_crusher" />
+												<int name="precise_size" value="1" />
+												<float name="offset_distance" value="0" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073744009" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+									<template_reference name="action" value="action\requirement_action" comment="axis">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="True" />
+										<bool name="kill_action_on_failed_requirements" value="True" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_all_in_list">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<list name="requirements">
+													<template_reference name="requirement" value="requirements\required_race">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<instance_reference name="race" value="racebps\german" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\german\vehicles\panther_squad\panther_squad_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\german\vehicles\panzer_iv_squad\panzer_iv_ausf_j_ostheer_mp" />
+													</template_reference>
+												</list>
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\set_start_position_target_action">
+												<uniqueid name="id" value="1073744010" />
+												<list name="action_list">
+													<template_reference name="action" value="action\random_action">
+														<bool name="instant" value="True" />
+														<list name="random_actions">
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\german\vehicles\panther_squad\panther_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744011" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\german\vehicles\panzer_iv_squad\panzer_iv_ausf_j_ostheer_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744012" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+														</list>
+														<uniqueid name="id" value="1073744013" />
+													</template_reference>
+												</list>
+												<instance_reference name="pass_type" value="pass_types\heavy_crusher" />
+												<int name="precise_size" value="1" />
+												<float name="offset_distance" value="0" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073744014" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+									<template_reference name="action" value="action\requirement_action" comment="waxis">
+										<bool name="check_self" value="False" />
+										<bool name="global_fire_and_forget_on_success" value="False" />
+										<bool name="instant_requirement_check" value="True" />
+										<bool name="kill_action_on_failed_requirements" value="True" />
+										<bool name="no_retrigger" value="False" />
+										<bool name="validate_all_sub_actions" value="False" />
+										<list name="requirement_table">
+											<template_reference name="required" value="requirements\required_all_in_list">
+												<enum name="reason" value="usage" />
+												<locstring name="ui_name" value="0" />
+												<list name="requirements">
+													<template_reference name="requirement" value="requirements\required_race">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<instance_reference name="race" value="racebps\west_german" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\west_german\vehicles\hetzer_squad\hetzer_squad_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="6" />
+														<instance_reference name="squad_name" value="sbps\races\west_german\vehicles\goliath\goliath_mp" />
+													</template_reference>
+													<template_reference name="requirement" value="requirements\required_squad">
+														<enum name="reason" value="usage" />
+														<locstring name="ui_name" value="0" />
+														<float name="max_squad_cap" value="2" />
+														<instance_reference name="squad_name" value="sbps\races\west_german\vehicles\jagdpanzer_tank_destroyer_squad\jagdpanzer_tank_destroyer_squad_mp" />
+													</template_reference>
+												</list>
+											</template_reference>
+										</list>
+										<list name="action_table">
+											<template_reference name="action" value="action\set_start_position_target_action">
+												<uniqueid name="id" value="1073744015" />
+												<list name="action_list">
+													<template_reference name="action" value="action\random_action">
+														<bool name="instant" value="True" />
+														<list name="random_actions">
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\west_german\vehicles\hetzer_squad\hetzer_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744019" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\west_german\vehicles\goliath\goliath_mp" />
+																			<instance_reference name="squad" value="sbps\races\west_german\vehicles\goliath\goliath_mp" />
+																			<instance_reference name="squad" value="sbps\races\west_german\vehicles\goliath\goliath_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744020" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+															<group name="action_choice">
+																<list name="actions">
+																	<template_reference name="action" value="action\reinforcements_action">
+																		<bool name="allow_building_spawn" value="True" />
+																		<float name="minimum_pop_used" value="0" />
+																		<float name="points_total" value="0" />
+																		<bool name="spawn_random_squads" value="False" />
+																		<list name="entity_table">
+																		</list>
+																		<list name="squad_table">
+																			<instance_reference name="squad" value="sbps\races\west_german\vehicles\jagdpanzer_tank_destroyer_squad\jagdpanzer_tank_destroyer_squad_mp" />
+																		</list>
+																		<bool name="use_attack_move" value="True" />
+																		<uniqueid name="id" value="1073744021" />
+																		<bool name="ignore_requirements" value="True" />
+																	</template_reference>
+																</list>
+																<int name="weight" value="1" />
+															</group>
+														</list>
+														<uniqueid name="id" value="1073744022" />
+													</template_reference>
+												</list>
+												<instance_reference name="pass_type" value="pass_types\heavy_crusher" />
+												<int name="precise_size" value="1" />
+												<float name="offset_distance" value="0" />
+											</template_reference>
+										</list>
+										<uniqueid name="id" value="1073744023" />
+										<bool name="fire_and_forget_non_global" value="False" />
+										<template_reference name="ui_help_text" value="tables\help_text_phrase">
+											<int name="phrase_order" value="0" />
+											<locstring name="phrase" value="0" />
+										</template_reference>
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073743986" />
+							</template_reference>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<list name="requirements">
+		</list>
+		<icon name="ui_kicker_icon_name" value="" />
+		<locstring name="ui_squad_name_override" value="0" />
+		<locstring name="ui_squad_help_text_override" value="0" />
+		<locstring name="ui_squad_extra_text_override" value="0" />
+		<list name="ui_preview">
+		</list>
+		<list name="on_cancel_actions">
+		</list>
+		<list name="on_begin_actions">
+		</list>
+	</group>
+	<uniqueid name="pbgid" value="1073741838" />
+</instance>
