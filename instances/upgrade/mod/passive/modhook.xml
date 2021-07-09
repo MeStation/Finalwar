@@ -848,6 +848,10 @@
 						<uniqueid name="id" value="1073744864" />
 						<instance_reference name="ability_to_add" value="abilities\mod\frontbunker\build_frontbase_bunker" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 					</template_reference>
+					<template_reference name="action" value="action\add_ability_action">
+						<uniqueid name="id" value="1073747558" />
+						<instance_reference name="ability_to_add" value="abilities\mod\infantry\gather\res_gather" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+					</template_reference>
 				</list>
 				<enum name="deprecated_squad_class_type" value="combat_engineer" />
 				<list name="target_requirements">
@@ -877,6 +881,10 @@
 					<template_reference name="action" value="action\add_ability_action">
 						<uniqueid name="id" value="1073744865" />
 						<instance_reference name="ability_to_add" value="abilities\mod\frontbunker\build_frontbase_bunker" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+					</template_reference>
+					<template_reference name="action" value="action\add_ability_action">
+						<uniqueid name="id" value="1073747559" />
+						<instance_reference name="ability_to_add" value="abilities\mod\infantry\gather\res_gather" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 					</template_reference>
 				</list>
 				<enum name="deprecated_squad_class_type" value="pioneer" />

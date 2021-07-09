@@ -37,11 +37,11 @@
 			<Children>
 				<d2p1:anyType i:type="BurnModInfo">
 					<Dependencies />
-					<Description>version: 1.2___ build: 06/20/2021...
+					<Description>version: 1.4___ build: 06/30/2021...
 the mod is minimal to modify original data.
 Source: https://github.com/MeStation/Finalwar
 #Whats function is mod got ?
-1).Popcap up to 250 (max 500, default 150).
+1).Popcap up to (max 1000, default 100).
 2).All damage increased by 50%.
 3).Ambient building is not easy to destroy.
 4).Standard infantry adds some submachinegun item or scoped rifle item.

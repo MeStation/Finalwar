@@ -44,10 +44,10 @@
 		</group>
 		<group name="race_population_cap_table">
 			<float name="base_medic_cap" value="6" />
-			<float name="base_personnel_cap" value="150" />
+			<float name="base_personnel_cap" value="100" />
 			<float name="base_vehicle_cap" value="0" />
 			<float name="max_medic_cap" value="8" />
-			<float name="max_personnel_cap" value="500" />
+			<float name="max_personnel_cap" value="1000" />
 			<float name="max_vehicle_cap" value="0" />
 		</group>
 		<group name="starting_resources">

@@ -137,6 +137,7 @@
 			<list name="abilities">
 				<instance_reference name="ability" value="abilities\mod\retreat_point" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 				<instance_reference name="ability" value="abilities\mod\frontline_hq\convert_front_headquarters" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+				<instance_reference name="ability" value="abilities\mod\frontline_hq\increase_popcap" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 			</list>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\construction_ext">

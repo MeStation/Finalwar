@@ -33,7 +33,7 @@
 			<float name="death_seconds" value="45" />
 			<bool name="delete_when_dead" value="True" />
 			<bool name="force_attacker_memory" value="False" />
-			<float name="hitpoints" value="1000" />
+			<float name="hitpoints" value="250" />
 			<bool name="is_invincible" value="False" />
 			<bool name="is_salvagable_wreck" value="False" />
 			<bool name="keep_wreck_ownership" value="False" />
@@ -159,7 +159,7 @@
 					</list>
 				</group>
 			</list>
-			<float name="weapon_priority" value="-100" />
+			<float name="weapon_priority" value="-1000" />
 			<template_reference name="wreck_entity_option" value="options\none">
 			</template_reference>
 			<list name="self_destruct_actions">
@@ -584,17 +584,17 @@
 			<bool name="crushes_buildings" value="True" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\moving_ext">
-			<float name="acceleration" value="8" />
-			<float name="deceleration" value="7" />
+			<float name="acceleration" value="2" />
+			<float name="deceleration" value="3" />
 			<float name="high_path_look_ahead_max_dist" value="25" />
 			<bool name="orient_to_terrain" value="True" />
 			<instance_reference name="pass_type" value="pass_types\light_crusher" />
-			<float name="rotation_rate" value="270" />
+			<float name="rotation_rate" value="120" />
 			<float name="rotation_rate_crouch" value="870" />
 			<float name="rotation_rate_prone" value="225" />
 			<float name="rotation_rate_stand" value="870" />
 			<bool name="smooth_path" value="True" />
-			<float name="speed_max" value="12" />
+			<float name="speed_max" value="8" />
 			<instance_reference name="turn_plan" value="turn_plan\tank_churchill" />
 			<float name="on_ice_accel_decel_multiplier" value="0.6" />
 			<float name="on_land_overturn_scale" value="1.25" />
@@ -798,6 +798,14 @@
 					</template_reference>
 					<bool name="permanent" value="True" />
 					<uniqueid name="id" value="1073745225" />
+				</template_reference>
+				<template_reference name="action" value="action\animator_set_state">
+					<bool name="apply_to_leader_only" value="False" />
+					<string name="do_action_state_name" value="injured" />
+					<bool name="retrigger" value="False" />
+					<string name="state_machine_name" value="medickit_mode" />
+					<string name="undo_action_state_name" value="" />
+					<uniqueid name="id" value="1073747635" />
 				</template_reference>
 			</list>
 		</template_reference>
