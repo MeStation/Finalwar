@@ -45,7 +45,7 @@
 				<float name="z" value="0" />
 			</group>
 			<enum name="type" value="squad" />
-			<instance_reference name="weapon" value="weapon\mod\arms\rifle\anti_tank\_kynoch_55_boys_tracer" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+			<instance_reference name="weapon" value="weapon\mod\arms\rifle\anti_tank\_kynoch_55_boys_group" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 		</group>
 		<list name="on_add_actions">
 		</list>

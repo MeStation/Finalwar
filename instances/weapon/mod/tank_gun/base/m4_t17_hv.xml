@@ -1,9 +1,9 @@
 <instance description="" template="weapon">
 	<group name="weapon_bag">
 		<group name="accuracy">
-			<float name="near" value="0.055" />
-			<float name="far" value="0.03" />
-			<float name="mid" value="0.045" />
+			<float name="near" value="0.5" />
+			<float name="far" value="0.33" />
+			<float name="mid" value="0.39" />
 		</group>
 		<group name="aim">
 			<group name="fire_aim_time">
@@ -29,7 +29,7 @@
 			<string name="track_horizontal_speed" value="Main_Gun_Horiz_Speed" />
 			<string name="track_vertical" value="Main_Gun_Vertical" />
 			<string name="track_vertical_speed" value="" />
-			<string name="variety_name" value="" />
+			<string name="variety_name" value="hvap" />
 			<string name="visibility_name" value="" />
 			<string name="target_range_name" value="" />
 		</group>
@@ -90,8 +90,8 @@
 		<group name="behaviour">
 			<bool name="aa_weapon" value="False" />
 			<bool name="aa_weapon_shoot_through" value="False" />
-			<bool name="artillery_force_obey_los" value="False" />
-			<bool name="attack_team_weapon_user" value="False" />
+			<bool name="artillery_force_obey_los" value="True" />
+			<bool name="attack_team_weapon_user" value="True" />
 			<bool name="can_be_offhanded" value="False" />
 			<bool name="can_be_substituted" value="False" />
 			<float name="combat_slot_offset" value="0" />
@@ -112,7 +112,7 @@
 			<float name="reaction_radius" value="1" />
 			<bool name="can_be_pilfered" value="True" />
 			<bool name="causes_combat" value="True" />
-			<bool name="can_abort_winddown" value="False" />
+			<bool name="can_abort_winddown" value="True" />
 			<enum name="reaction_type" value="sniped" />
 			<bool name="ignore_relations" value="False" />
 			<template_reference name="wants_prone_firing_option" value="options\none">
@@ -414,17 +414,17 @@
 			</list>
 		</group>
 		<group name="scatter">
-			<float name="angle_scatter" value="5.25" />
+			<float name="angle_scatter" value="1" />
 			<bool name="burst_pattern_enable" value="False" />
 			<float name="delay_bracket_change_chance" value="0" />
 			<float name="distance_bracket_count_air" value="0" />
 			<float name="distance_bracket_count_ground" value="1" />
-			<float name="distance_scatter_max" value="3.5" />
-			<float name="distance_scatter_obj_hit_min" value="10" />
-			<float name="distance_scatter_offset" value="0" />
-			<float name="distance_scatter_ratio" value="1" />
-			<float name="fow_angle_multiplier" value="1.25" />
-			<float name="fow_distance_multiplier" value="1.25" />
+			<float name="distance_scatter_max" value="2" />
+			<float name="distance_scatter_obj_hit_min" value="0" />
+			<float name="distance_scatter_offset" value="0.25" />
+			<float name="distance_scatter_ratio" value="0.0556" />
+			<float name="fow_angle_multiplier" value="1.75" />
+			<float name="fow_distance_multiplier" value="1.75" />
 			<float name="max_tilt_angle" value="0" />
 			<float name="min_tilt_angle" value="0" />
 			<float name="tilt_max_distance" value="0" />
@@ -467,7 +467,7 @@
 		<group name="tracking">
 			<float name="fire_cone_angle" value="5" />
 			<group name="normal">
-				<float name="max_down" value="-90" />
+				<float name="max_down" value="-30" />
 				<float name="max_left" value="-180" />
 				<float name="max_right" value="180" />
 				<float name="max_up" value="30" />
@@ -480,7 +480,7 @@
 			<float name="fire_cone_angle_vert" value="2" />
 		</group>
 		<locstring name="ui_name" value="0" />
-		<enum name="weapon_type" value="flame" />
+		<enum name="weapon_type" value="big_explosive" />
 		<instance_reference name="ui_range" value="" />
 		<instance_reference name="ui_setfacing" value="" />
 		<group name="penetration">

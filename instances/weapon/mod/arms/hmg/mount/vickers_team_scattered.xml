@@ -51,9 +51,9 @@
 				<float name="mid" value="0.25" />
 			</group>
 			<group name="damage_friendly">
-				<float name="far" value="0.025" />
-				<float name="near" value="0.25" />
-				<float name="mid" value="0.075" />
+				<float name="far" value="0.0025" />
+				<float name="near" value="0.025" />
+				<float name="mid" value="0.0075" />
 			</group>
 			<group name="distance">
 				<float name="far" value="3" />
@@ -74,9 +74,9 @@
 			</group>
 			<bool name="damage_all_in_hold" value="False" />
 			<template_reference name="aoe_penetration" value="tables\range_table">
-				<float name="far" value="1.5" />
-				<float name="mid" value="2" />
-				<float name="near" value="3" />
+				<float name="far" value="0.5" />
+				<float name="mid" value="0.75" />
+				<float name="near" value="1" />
 			</template_reference>
 			<group name="building_damage">
 				<float name="near" value="1" />
@@ -298,7 +298,7 @@
 							<list name="actions">
 								<template_reference name="action" value="action\timed_action">
 									<float name="duration" value="5" />
-									<bool name="fire_and_forget" value="False" />
+									<bool name="fire_and_forget" value="True" />
 									<list name="subactions">
 										<template_reference name="action" value="action\slot_item_add">
 											<instance_reference name="slot_item" value="slot_item\mod\passive\script\hmg_dmg_script" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
@@ -338,14 +338,55 @@
 			<float name="wind_down" value="0" />
 			<float name="wind_up" value="0" />
 			<list name="on_fire_actions">
+				<template_reference name="action" value="action\target">
+					<group name="area_info">
+						<float name="angle_left" value="0" />
+						<float name="angle_right" value="0" />
+						<enum name="area_type" value="circle" />
+						<float name="radius" value="35" />
+					</group>
+					<bool name="die_with_creator" value="False" />
+					<bool name="do_recalc_targets" value="False" />
+					<float name="duration" value="0.125" />
+					<bool name="entity_targets" value="False" />
+					<instance_reference name="entity_types_to_choose" value="" />
+					<bool name="stationary" value="False" />
+					<group name="target_info">
+						<template_reference name="target_info" value="type_ability_target_type\allied">
+						</template_reference>
+					</group>
+					<enum name="unit_type" value="hmgs" />
+					<list name="subactions">
+						<template_reference name="action" value="action\change_target_action">
+							<list name="actions">
+								<template_reference name="action" value="action\timed_action">
+									<float name="duration" value="10" />
+									<bool name="fire_and_forget" value="True" />
+									<list name="subactions">
+										<template_reference name="action" value="action\slot_item_add">
+											<instance_reference name="slot_item" value="slot_item\mod\passive\script\hmg_rate_script" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+											<bool name="permanent" value="False" />
+											<uniqueid name="id" value="1073748548" />
+										</template_reference>
+									</list>
+									<uniqueid name="id" value="1073748549" />
+								</template_reference>
+							</list>
+							<enum name="change_target_type" value="squad" />
+							<uniqueid name="id" value="1073748550" />
+						</template_reference>
+					</list>
+					<uniqueid name="id" value="1073748547" />
+					<bool name="any_subaction" value="True" />
+				</template_reference>
 			</list>
 		</group>
-		<float name="flinch_radius" value="2" />
+		<float name="flinch_radius" value="10" />
 		<string name="fx_action_target_name" value="lmg_vickers_target" />
 		<bool name="fx_always_visible" value="False" />
 		<float name="fx_building_hit_delay" value="0" />
 		<float name="fx_delay_in_building" value="0" />
-		<string name="fx_munition_name" value="hmg_large" />
+		<string name="fx_munition_name" value="sniper_antitank" />
 		<string name="fx_tracer_name" value="lmg_vickers_vet_tracer" />
 		<float name="fx_tracer_speed" value="400" />
 		<bool name="fx_use_building_panel_normal" value="True" />

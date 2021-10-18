@@ -128,32 +128,32 @@
 								<bool name="is_present" value="False" />
 								<float name="max_completed" value="100" />
 								<float name="min_completed" value="1" />
-								<instance_reference name="upgrade_name" value="upgrade\mod\passive\modhook" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade_name" value="upgrade\mod\passive\_mod_modhook" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 							</template_reference>
 						</list>
 						<list name="action_table">
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\mod\passive\modhook" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade" value="upgrade\mod\passive\_mod_modhook" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								<uniqueid name="id" value="1073747263" />
 							</template_reference>
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\realistic" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\_mod_realistic" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								<uniqueid name="id" value="1073747264" />
 							</template_reference>
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\enhance" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\_mod_enhance" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								<uniqueid name="id" value="1073747265" />
 							</template_reference>
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\weaken" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\_mod_weaken" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								<uniqueid name="id" value="1073747266" />
 							</template_reference>
 						</list>

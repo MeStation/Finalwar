@@ -9,7 +9,7 @@
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\sim_entity_ext">
 			<bool name="is_in_spatial_bucket" value="False" />
-			<float name="rotate_snap" value="90" />
+			<float name="rotate_snap" value="360" />
 			<float name="transferable" value="0" />
 			<bool name="kill_paradrop" value="True" />
 		</template_reference>
@@ -182,9 +182,9 @@
 			<group name="artillery">
 				<bool name="can_counter_barrage" value="True" />
 				<bool name="is_artillery" value="False" />
-				<bool name="is_target_only" value="False" />
-				<float name="speed_distance_multiplier" value="0.2" />
-				<float name="speed_increment" value="0.5" />
+				<bool name="is_target_only" value="True" />
+				<float name="speed_distance_multiplier" value="0.5" />
+				<float name="speed_increment" value="20" />
 				<enum name="firing_angle_type" value="low_angle" />
 				<bool name="use_homing_when_no_blocker" value="False" />
 				<float name="non_collide_start_angle" value="10" />
@@ -201,7 +201,7 @@
 			<bool name="delay_detonate_ui_enabled" value="False" />
 			<string name="launcher_marker" value="fx_muzzle_maingun" />
 			<float name="life_time_while_alive" value="0" />
-			<float name="rotation_speed" value="0" />
+			<float name="rotation_speed" value="10000" />
 			<bool name="spawn_collision_fx" value="True" />
 			<float name="speed" value="160" />
 			<bool name="collision_land_ignore" value="False" />

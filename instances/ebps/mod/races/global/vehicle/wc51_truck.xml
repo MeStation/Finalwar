@@ -779,8 +779,8 @@
 			<float name="rotation_rate_prone" value="225" />
 			<float name="rotation_rate_stand" value="870" />
 			<bool name="smooth_path" value="True" />
-			<float name="speed_max" value="12" />
-			<instance_reference name="turn_plan" value="turn_plan\motorcycle_i" />
+			<float name="speed_max" value="45" />
+			<instance_reference name="turn_plan" value="turn_plan\russianhmg_i" />
 			<float name="on_ice_accel_decel_multiplier" value="0.6" />
 			<float name="on_land_overturn_scale" value="1.25" />
 			<float name="on_ice_overturn_scale" value="2" />

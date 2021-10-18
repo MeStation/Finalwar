@@ -13,7 +13,7 @@
 						<enum name="reason" value="usage" />
 						<locstring name="ui_name" value="0" />
 						<bool name="is_present" value="False" />
-						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\_mod_vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 						<bool name="include_queued" value="False" />
 					</template_reference>
 				</list>
@@ -21,7 +21,7 @@
 					<template_reference name="action" value="action\upgrade_add">
 						<bool name="apply_to_entities_in_squad" value="False" />
 						<bool name="trigger_publish_event" value="False" />
-						<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\_mod_vp_deploy" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 						<uniqueid name="id" value="1073743110" />
 					</template_reference>
 					<template_reference name="action" value="action\timed_action">

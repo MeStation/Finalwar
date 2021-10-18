@@ -12,24 +12,8 @@
 					<bool name="neutral" value="False" />
 					<bool name="self" value="True" />
 					<list name="subactions">
-						<template_reference name="action" value="action\apply_modifiers_action">
-							<float name="duration" value="0" />
-							<bool name="permanent" value="False" />
-							<list name="modifiers">
-								<template_reference name="modifier" value="modifiers\ability_cost_manpower_modifier">
-									<enum name="application_type" value="apply_to_ability" />
-									<bool name="exclusive" value="False" />
-									<string name="modifier_id" value="" />
-									<instance_reference name="target_type_name" value="abilities\mod\frontline_hq\increase_popcap" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
-									<enum name="usage_type" value="multiply_add" />
-									<float name="value" value="0.15" />
-									<instance_reference name="tooltip" value="modifier_tooltip\ability_cost_manpower_modifier" />
-								</template_reference>
-							</list>
-							<uniqueid name="id" value="1073747593" />
-						</template_reference>
 						<template_reference name="action" value="action\delay">
-							<float name="delay" value="4" />
+							<float name="delay" value="0.1" />
 							<float name="delay_min" value="0" />
 							<bool name="progress_bar" value="False" />
 							<bool name="randomize" value="False" />
@@ -70,7 +54,7 @@
 			<float name="action" value="0" />
 			<float name="command" value="0" />
 			<float name="fuel" value="0" />
-			<float name="manpower" value="150" />
+			<float name="manpower" value="0" />
 			<float name="munition" value="0" />
 			<float name="popcap" value="0" />
 		</group>
@@ -78,7 +62,7 @@
 		<float name="cursor_ghost_blueprint_angle" value="0" />
 		<bool name="disable_combat" value="True" />
 		<bool name="disable_when_active" value="True" />
-		<float name="duration_time" value="5" />
+		<float name="duration_time" value="0.1" />
 		<bool name="enable_in_building" value="True" />
 		<bool name="enable_in_vehicle" value="True" />
 		<bool name="engage_combat" value="False" />
@@ -96,7 +80,7 @@
 		<float name="move_back_distance" value="10" />
 		<float name="range" value="85" />
 		<bool name="range_ignore" value="True" />
-		<float name="recharge_time" value="10" />
+		<float name="recharge_time" value="0.2" />
 		<bool name="refundable" value="False" />
 		<bool name="require_no_shot_block" value="False" />
 		<enum name="shared_timer" value="pm_airborne_support" />
@@ -145,7 +129,7 @@
 		<list name="requirements">
 		</list>
 		<enum name="ability_super" value="tp_airstrike" />
-		<int name="ui_position" value="32" />
+		<int name="ui_position" value="31" />
 		<bool name="ui_mini_map_capture" value="True" />
 		<bool name="facing_ignore_during_active" value="False" />
 		<instance_reference name="ui_range" value="" />

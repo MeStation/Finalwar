@@ -294,17 +294,6 @@
 						</template_reference>
 					</list>
 					<list name="action_table">
-						<template_reference name="action" value="action\timed_action">
-							<float name="duration" value="5" />
-							<bool name="fire_and_forget" value="True" />
-							<list name="subactions">
-								<template_reference name="action" value="action\scar_function_call">
-									<string name="function_name" value="Kaluga_SniperReaction" />
-									<uniqueid name="id" value="1073744243" />
-								</template_reference>
-							</list>
-							<uniqueid name="id" value="1073744244" />
-						</template_reference>
 						<template_reference name="action" value="action\random_action">
 							<bool name="instant" value="True" />
 							<list name="random_actions">

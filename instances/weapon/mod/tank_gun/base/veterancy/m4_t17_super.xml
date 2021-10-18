@@ -1,9 +1,9 @@
 <instance description="" template="weapon">
 	<group name="weapon_bag">
 		<group name="accuracy">
-			<float name="near" value="0.055" />
-			<float name="far" value="0.03" />
-			<float name="mid" value="0.045" />
+			<float name="near" value="0.5" />
+			<float name="far" value="0.33" />
+			<float name="mid" value="0.39" />
 		</group>
 		<group name="aim">
 			<group name="fire_aim_time">
@@ -90,7 +90,7 @@
 		<group name="behaviour">
 			<bool name="aa_weapon" value="False" />
 			<bool name="aa_weapon_shoot_through" value="False" />
-			<bool name="artillery_force_obey_los" value="False" />
+			<bool name="artillery_force_obey_los" value="True" />
 			<bool name="attack_team_weapon_user" value="False" />
 			<bool name="can_be_offhanded" value="False" />
 			<bool name="can_be_substituted" value="False" />
@@ -467,7 +467,7 @@
 		<group name="tracking">
 			<float name="fire_cone_angle" value="5" />
 			<group name="normal">
-				<float name="max_down" value="-90" />
+				<float name="max_down" value="-30" />
 				<float name="max_left" value="-180" />
 				<float name="max_right" value="180" />
 				<float name="max_up" value="30" />
@@ -480,7 +480,7 @@
 			<float name="fire_cone_angle_vert" value="2" />
 		</group>
 		<locstring name="ui_name" value="0" />
-		<enum name="weapon_type" value="flame" />
+		<enum name="weapon_type" value="big_explosive" />
 		<instance_reference name="ui_range" value="" />
 		<instance_reference name="ui_setfacing" value="" />
 		<group name="penetration">

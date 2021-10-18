@@ -223,7 +223,7 @@
 								<bool name="is_present" value="True" />
 								<float name="max_completed" value="100" />
 								<float name="min_completed" value="1" />
-								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\softcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\levels\_mod_softcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 							</template_reference>
 							<template_reference name="requirement" value="requirements\required_player_upgrade">
 								<enum name="reason" value="usage" />
@@ -231,7 +231,7 @@
 								<bool name="is_present" value="True" />
 								<float name="max_completed" value="100" />
 								<float name="min_completed" value="1" />
-								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\levels\_mod_hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 							</template_reference>
 							<template_reference name="requirement" value="requirements\required_player_upgrade">
 								<enum name="reason" value="usage" />
@@ -239,7 +239,7 @@
 								<bool name="is_present" value="True" />
 								<float name="max_completed" value="100" />
 								<float name="min_completed" value="1" />
-								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\nightmare" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+								<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\levels\_mod_nightmare" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 							</template_reference>
 						</list>
 					</template_reference>

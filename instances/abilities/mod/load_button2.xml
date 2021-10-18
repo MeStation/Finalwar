@@ -26,14 +26,14 @@
 									<bool name="is_present" value="False" />
 									<float name="max_completed" value="100" />
 									<float name="min_completed" value="1" />
-									<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+									<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\levels\_mod_hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								</template_reference>
 							</list>
 							<list name="action_table">
 								<template_reference name="action" value="action\upgrade_add">
 									<bool name="apply_to_entities_in_squad" value="False" />
 									<bool name="trigger_publish_event" value="False" />
-									<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\global\hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+									<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\mode_level\levels\_mod_hardcore" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 									<uniqueid name="id" value="1073746110" />
 								</template_reference>
 							</list>
@@ -67,14 +67,14 @@
 									<bool name="is_present" value="False" />
 									<float name="max_completed" value="100" />
 									<float name="min_completed" value="1" />
-									<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+									<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\_mod_level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 								</template_reference>
 							</list>
 							<list name="action_table">
 								<template_reference name="action" value="action\upgrade_add">
 									<bool name="apply_to_entities_in_squad" value="False" />
 									<bool name="trigger_publish_event" value="False" />
-									<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\mode_level\level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+									<instance_reference name="upgrade" value="upgrade\mod\passive\armymod\mode_level\_mod_level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 									<uniqueid name="id" value="1073746113" />
 								</template_reference>
 							</list>
@@ -192,7 +192,7 @@
 						<bool name="is_present" value="True" />
 						<float name="max_completed" value="100" />
 						<float name="min_completed" value="1" />
-						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\infantry\combat" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\global\infantry\_mod_combat" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 					</template_reference>
 					<template_reference name="requirement" value="requirements\required_player_upgrade">
 						<enum name="reason" value="usage" />
@@ -200,7 +200,7 @@
 						<bool name="is_present" value="True" />
 						<float name="max_completed" value="100" />
 						<float name="min_completed" value="1" />
-						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\level_1" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\_mod_level_1" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 					</template_reference>
 					<template_reference name="requirement" value="requirements\required_player_upgrade">
 						<enum name="reason" value="usage" />
@@ -208,7 +208,7 @@
 						<bool name="is_present" value="False" />
 						<float name="max_completed" value="100" />
 						<float name="min_completed" value="1" />
-						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+						<instance_reference name="upgrade_name" value="upgrade\mod\passive\armymod\mode_level\_mod_level_2" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 					</template_reference>
 					<template_reference name="requirement" value="requirements\required_used_population">
 						<group name="used_pop">

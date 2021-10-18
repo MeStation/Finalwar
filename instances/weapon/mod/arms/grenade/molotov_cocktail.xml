@@ -353,7 +353,7 @@
 						<float name="min_distance" value="5" />
 					</group>
 				</group>
-				<float name="damage_frequency" value="0.5" />
+				<float name="damage_frequency" value="1.25" />
 				<instance_reference name="dot_weapon" value="weapon\mod\misc\flame\flame_dot_damage" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 				<float name="dots_max" value="1" />
 				<float name="dots_min" value="1" />

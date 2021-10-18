@@ -29,9 +29,9 @@
 			<string name="track_horizontal_speed" value="" />
 			<string name="track_vertical" value="Rifle_Tilt" />
 			<string name="track_vertical_speed" value="" />
-			<string name="variety_name" value="on" />
-			<string name="visibility_name" value="rifle_mosin_nagant_sniper_visible" />
-			<string name="target_range_name" value="" />
+			<string name="variety_name" value="off" />
+			<string name="visibility_name" value="rifle_garand_visible" />
+			<string name="target_range_name" value="rifle_range" />
 		</group>
 		<group name="area_effect">
 			<group name="accuracy">
@@ -152,8 +152,8 @@
 		</group>
 		<group name="cooldown">
 			<group name="duration">
-				<float name="max" value="0" />
-				<float name="min" value="0" />
+				<float name="max" value="0.87" />
+				<float name="min" value="0.6" />
 			</group>
 			<group name="duration_multiplier">
 				<float name="near" value="1" />
@@ -272,8 +272,8 @@
 			</group>
 		</group>
 		<group name="damage">
-			<float name="max" value="14" />
-			<float name="min" value="12" />
+			<float name="max" value="10" />
+			<float name="min" value="8" />
 			<list name="on_penetrated_actions">
 			</list>
 			<list name="post_damage_actions">
@@ -290,18 +290,18 @@
 			</list>
 		</group>
 		<group name="fire">
-			<float name="wind_down" value="1.3" />
+			<float name="wind_down" value="0" />
 			<float name="wind_up" value="0" />
 			<list name="on_fire_actions">
 			</list>
 		</group>
 		<float name="flinch_radius" value="0" />
-		<string name="fx_action_target_name" value="mosin_nagant_sniper_target" />
+		<string name="fx_action_target_name" value="garand_rifle_target" />
 		<bool name="fx_always_visible" value="False" />
 		<float name="fx_building_hit_delay" value="0" />
 		<float name="fx_delay_in_building" value="0" />
-		<string name="fx_munition_name" value="hmg_large" />
-		<string name="fx_tracer_name" value="fx_mosin_nagant_sniper_tracer" />
+		<string name="fx_munition_name" value="sniper" />
+		<string name="fx_tracer_name" value="fx_garand_rifle_tracer" />
 		<float name="fx_tracer_speed" value="800" />
 		<bool name="fx_use_building_panel_normal" value="True" />
 		<locstring name="help_text" value="0" />

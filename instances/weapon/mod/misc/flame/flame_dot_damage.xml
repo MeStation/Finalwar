@@ -176,33 +176,33 @@
 			</group>
 			<group name="tp_garrison_cover">
 				<float name="accuracy_multiplier" value="1" />
-				<float name="damage_multiplier" value="1.25" />
+				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_garrison_halftrack">
 				<float name="accuracy_multiplier" value="1" />
-				<float name="damage_multiplier" value="0.1" />
-				<float name="penetration_multiplier" value="0.5" />
-				<float name="suppression_multiplier" value="0" />
+				<float name="damage_multiplier" value="1" />
+				<float name="penetration_multiplier" value="1" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_heavy">
 				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0.1" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_light">
 				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0.5" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_negative">
 				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="1.5" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_open">
 				<float name="accuracy_multiplier" value="1" />
@@ -217,28 +217,28 @@
 				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_trench">
-				<float name="accuracy_multiplier" value="5" />
+				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_water">
-				<float name="accuracy_multiplier" value="0.2" />
-				<float name="damage_multiplier" value="0.5" />
-				<float name="penetration_multiplier" value="0.5" />
+				<float name="accuracy_multiplier" value="1" />
+				<float name="damage_multiplier" value="1" />
+				<float name="penetration_multiplier" value="1" />
 				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_z_bunker">
 				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
-				<float name="penetration_multiplier" value="2" />
-				<float name="suppression_multiplier" value="0" />
+				<float name="penetration_multiplier" value="1" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_z_emplacement">
-				<float name="accuracy_multiplier" value="0.5" />
+				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0.75" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 			<group name="tp_z_ice">
 				<float name="accuracy_multiplier" value="1" />
@@ -268,7 +268,7 @@
 				<float name="accuracy_multiplier" value="1" />
 				<float name="damage_multiplier" value="1" />
 				<float name="penetration_multiplier" value="1" />
-				<float name="suppression_multiplier" value="0.1" />
+				<float name="suppression_multiplier" value="1" />
 			</group>
 		</group>
 		<group name="damage">
@@ -434,9 +434,9 @@
 		<instance_reference name="ui_range" value="" />
 		<instance_reference name="ui_setfacing" value="" />
 		<group name="penetration">
-			<float name="near" value="12" />
-			<float name="far" value="12" />
-			<float name="mid" value="12" />
+			<float name="near" value="2" />
+			<float name="far" value="2" />
+			<float name="mid" value="2" />
 		</group>
 		<group name="ui_map_colour">
 			<int name="red" value="0" />

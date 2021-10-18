@@ -529,7 +529,7 @@
 			<float name="crash_fall_cap" value="60" />
 			<float name="crash_fall_rate" value="40" />
 			<float name="crash_turn_rate_cap" value="10" />
-			<instance_reference name="crash_weapon_name" value="weapon\mod\artillery\offmap\plane_crash" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
+			<instance_reference name="crash_weapon_name" value="weapon\mod\artillery\offmap\plane\plane_crash_light" mod="5b73dc2fc8d448868bdf91a8f303c1db" />
 			<float name="distance_to_dive" value="225" />
 			<float name="est_seconds_in_future" value="5" />
 			<float name="flight_max_turning_degree" value="10" />
@@ -578,7 +578,7 @@
 			</group>
 			<template_reference name="landing_option" value="options\none">
 			</template_reference>
-			<bool name="ascend_to_avoid_ground_collision" value="True" />
+			<bool name="ascend_to_avoid_ground_collision" value="False" />
 			<bool name="flight_enable_realistic_banked_turns" value="True" />
 			<template_reference name="aircraft_collision_option" value="options\none">
 			</template_reference>
